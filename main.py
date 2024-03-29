@@ -1,8 +1,9 @@
 from fastapi import FastAPI 
 import uvicorn 
-import part3_query_param
+import part3_query_param,part4_request_body
 app=FastAPI()
 app.include_router(part3_query_param.router1)
+app.include_router(part4_request_body.router2)
 from enum import Enum
 
 # @app.get("/")
