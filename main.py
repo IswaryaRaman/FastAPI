@@ -1,7 +1,8 @@
 from fastapi import FastAPI 
 import uvicorn 
-
+import part3_query_param
 app=FastAPI()
+app.include_router(part3_query_param.router1)
 from enum import Enum
 
 # @app.get("/")
@@ -43,6 +44,10 @@ def get_food(food_name:FoodEnum):
             "message":"still healthy but like sweet things"
         }
     return {"food_name":food_name,"message":"i like hot melted chocolate:)"}
+
+
+
+
 
 
 
