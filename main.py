@@ -1,12 +1,13 @@
 from fastapi import FastAPI 
 import uvicorn 
-import part3_query_param,part4_request_body,part5_queryparam_validation,part6_pathparam_validation,part7_body_multipleparam
+import part3_query_param,part4_request_body,part5_queryparam_validation,part6_pathparam_validation,part7_body_multipleparam,part8_body_fields
 app=FastAPI()
 app.include_router(part3_query_param.router1)
 app.include_router(part4_request_body.router2)
 app.include_router(part5_queryparam_validation.router3)
 app.include_router(part6_pathparam_validation.router4)
 app.include_router(part7_body_multipleparam.router5)
+app.include_router(part8_body_fields.router6)
 from enum import Enum
 
 # @app.get("/")
